@@ -1,4 +1,7 @@
+
 source 'https://rubygems.org'
+
+ruby '1.9.3', engine: 'jruby', engine_version: '1.7.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -42,8 +45,10 @@ end
 # gem 'capistrano', group: :development
 
 # Torquebox AS
-gem 'torquebox'
-gem 'torquebox-server'
+# gem 'torquebox'
+# gem 'torquebox-server'
+
+gem "torquebox-lite"
 
 group :development, :test do
   gem 'rspec-rails'
