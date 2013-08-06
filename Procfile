@@ -1,1 +1,1 @@
-web: torquebox-lite -b 0.0.0.0 -p $PORT --max-threads=15
+web: bundle exec puma -p $PORT -e ${RACK_ENV:-production}

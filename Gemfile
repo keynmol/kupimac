@@ -50,11 +50,8 @@ end
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
-# Torquebox AS
-# gem 'torquebox'
-# gem 'torquebox-server'
-
-gem "torquebox-lite"
+# Application server
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'
