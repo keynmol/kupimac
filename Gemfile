@@ -6,9 +6,6 @@ ruby '1.9.3', engine: 'jruby', engine_version: '1.7.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use jdbcsqlite3 as the database for Active Record
-gem 'activerecord-jdbcsqlite3-adapter'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -30,28 +27,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'activerecord-jdbcpostgresql-adapter'
+# Application server
+gem 'puma'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
-
-group :development do
-	gem 'activerecord-jdbcsqlite3-adapter'
-end
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
-
-# Application server
-gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -62,3 +44,10 @@ group :development, :test do
   gem 'guard-rspec'
 end
 
+group :development do
+  gem 'activerecord-jdbcsqlite3-adapter', '1.3.0.beta2' # release version fails with jruby
+end
+
+group :production do
+  gem 'activerecord-jdbcpostgresql-adapter'
+end

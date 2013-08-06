@@ -11,6 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130806132310) do
+
+  create_table "deals", force: true do |t|
+    t.text     "details"
+    t.string   "url"
+    t.integer  "device_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "deals", ["device_id"], name: "index_deals_on_device_id"
+
+  create_table "devices", force: true do |t|
+    t.string   "kind"
+    t.integer  "year"
+    t.string   "model_sid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "size"
+  end
+
+  create_table "orders", force: true do |t|
+    t.boolean  "active",     default: true
+    t.decimal  "max_price",  default: 0.0
+    t.decimal  "min_price",  default: 0.0
+    t.integer  "device_id"
+    t.integer  "person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "people", force: true do |t|
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
