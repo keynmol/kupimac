@@ -4,4 +4,6 @@ class Deal < ActiveRecord::Base
   validates :device_id, presence: true
   validates :url, presence: true, uniqueness: true
   validates :details, presence: true
+  validates :price, presence: true, numericality: true
+  validates :title, presence: true
 end

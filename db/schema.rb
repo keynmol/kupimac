@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130806132310) do
+ActiveRecord::Schema.define(version: 20130806140041) do
 
   create_table "deals", force: true do |t|
     t.text     "details"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 20130806132310) do
     t.integer  "device_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "image"
+    t.string   "contacts"
+    t.decimal  "price"
   end
 
   add_index "deals", ["device_id"], name: "index_deals_on_device_id"
