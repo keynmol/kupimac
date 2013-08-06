@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Application server
 gem 'puma'
 
+# DB adapter
+gem 'activerecord-jdbc-adapter', '1.3.0.rc1'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
