@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- Basic Page Needs
+================================================== -->
+  <meta charset="utf-8">
+  <title>Купи Mac!</title>
+  <meta name="description" content="Landing page for KupiMac. Coming soon. Whatever.">
+
+  <!-- Mobile Specific Metas
+================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS Stylesheets
+================================================== -->
+  <%= stylesheet_link_tag 'landing' %>
+
+  <!--[if lt IE 9]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <style>
+
+      #head  {
+          background:url('<%= asset_path('macbook.jpg') %>');
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+      }
+
+  </style>
+
+</head>
+<body>
+
+<header id="head">
+
+  <div class="inner">
+    <a href="#" class="logotext square"><h1>Купи Mac!</h1></a>
+    <div class="details right">
+
+      <div class="message">
+        <!-- Fading text. See core.js for list of words. -->
+        <p class="large">Всегда хотел купить почти новый Mac?..</p>
+
+        <p class="medium">... но мониторить Авито &laquo;24/7&raquo; в ожидании сказочного предложения нет ни сил, ни желания?</p>
+
+        <!-- Static text -->
+        <p class="large">Мы готовы сделать это за тебя, дружище!</p>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<section class="body">
+
+  <div class="inner">
+    <div id="extra">
+      <div class="block">
+        <h2 class="heading">
+						<span class="left">
+							<strong>О чем мы тут толкуем?</strong>
+						</span>
+        </h2>
+
+        <ul class="features">
+          <li>
+            <p>
+              <strong>Фича 1</strong>
+              Описание фичи 1
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>Фича 2</strong>
+              Описание фичи 2
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <strong>Фича 3</strong>
+              Описание фичи 3
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <ul class="social">
+      <a href="#"><img src="<%= asset_path 'twitter-icon.png'%>"/></a>
+      <a href="#"><img src="<%= asset_path 'facebook-icon.png'%>"/></a>
+      <a href="#"><img src="<%= asset_path 'vkontakte-icon.png'%>"/></a>
+      <a href="#"><img src="<%= asset_path 'googleplus-icon.png'%>"/></a>
+    </ul>
+  </div>
+</section>
+</body>
+</html>
