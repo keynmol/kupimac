@@ -43,10 +43,11 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', :require => false
   gem 'capybara'
   gem 'guard'
   gem 'guard-rspec'
+  gem "spork-rails", :git => 'git://github.com/sporkrb/spork-rails.git'
 end
 
 group :development do
