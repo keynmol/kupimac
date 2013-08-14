@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+parallaxHeader = ->
+  scrolled = $(window).scrollTop()
+  speedPerPixel = 0.4
+  toScroll = Math.min(scrolled*speedPerPixel, 100)
+  $("#head").css backgroundPosition: '0% ' + toScroll + '%'
+
+$(document).ready ->
+  $(window).scroll ->
+    parallaxHeader()
