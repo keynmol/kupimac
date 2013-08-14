@@ -7,3 +7,11 @@ parallaxHeader = ->
 $(document).ready ->
   $(window).scroll ->
     parallaxHeader()
+
+  $('section.social').hover(
+    ->
+      $(this).find('.button').css display: 'table-cell'
+    ,
+    ->
+      $(this).find('.button').hide()
+  )

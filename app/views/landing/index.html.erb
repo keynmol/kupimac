@@ -92,10 +92,23 @@
 
 <section class="social">
   <ul>
-    <li><a href="#"><img src="<%= asset_path 'social/twitter-icon.png' %>"/></a></li>
-    <li><a href="#"><img src="<%= asset_path 'social/facebook-icon.png' %>"/></a></li>
-    <li><a href="#"><img src="<%= asset_path 'social/vkontakte-icon.png' %>"/></a></li>
-    <li><a href="#"><img src="<%= asset_path 'social/googleplus-icon.png' %>"/></a></li>
+    <li class="twitter">
+      <span class="button">
+        <%= render 'twitter_button' %>
+      </span>
+    </li>
+
+    <li class="facebook">
+      <span class="button">
+        <%= render 'facebook_button' %>
+      </span>
+    </li>
+
+    <li class="googleplus">
+      <span class="button">
+        <%= render 'googleplus_button' %>
+      </span>
+    </li>
   </ul>
 </section>
 </body>
