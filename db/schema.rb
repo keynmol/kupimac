@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(version: 20130806140041) do
     t.datetime "updated_at"
   end
 
+  add_index "orders", ["device_id"], name: "index_orders_on_device_id"
+  add_index "orders", ["person_id"], name: "index_orders_on_person_id"
+
   create_table "people", force: true do |t|
     t.string   "email"
     t.datetime "created_at"

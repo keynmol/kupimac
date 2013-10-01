@@ -32,7 +32,7 @@ html, body {
 
 #head {
   width: 100%;
-  height: 400px;
+  height: 500px;
   color: #fff;
   background: image-url('landing/head.jpg');
   background-position: 0% 0%;
@@ -127,7 +127,7 @@ html, body {
   display: block;
   width: 100%;
   position: absolute;
-  top: 400px;
+  top: 500px;
 }
 
 .body .inner {
@@ -159,10 +159,14 @@ html, body {
 /* Headings
 ================================================== */
 #extra h2.heading {
-  font-size: 30px;
+  font-size: 40px;
   font-family: 'PT Serif Caption';
   display: block;
   margin-bottom: 10px;
+}
+
+.centered {
+  text-align: center;
 }
 
 #extra h2.heading span.right {
@@ -215,15 +219,26 @@ html, body {
   font-size: 0
 }
 
-.features li {
-  width: 33.33%;
+.features li.text {
+  width: 30%;
   display: inline-block;
   padding: 25px 10px 25px 0;
   vertical-align: top;
 }
 
+.features li.image {
+  width: 70%;
+  display: inline-block;
+  padding: 25px 10px 25px 0;
+  vertical-align: top;
+  text-align: center;
+  img {
+    max-width: 700px;
+  }
+}
+
 .features p {
-  font-size: 13px;
+  font-size: 18px;
   line-height: 16px;
   margin-left: 60px;
   vertical-align: top;
@@ -233,11 +248,16 @@ html, body {
 
 .features p strong {
   display: block;
-  font-size: 18px;
+  font-size: 24px;
   font-family: 'PT Serif Caption', Georgia, serif;
   line-height: 24px;
-  margin-bottom: 2px;
+  margin-bottom: 13px;
   color: #363636;
+}
+
+.choosemac {
+  background-image: image-url('landing/choosemac.png');
+  display: inline-block;
 }
 
 /* Misc

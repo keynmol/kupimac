@@ -47,6 +47,11 @@
 
         <!-- Static text -->
         <p class="large">Мы готовы сделать это за тебя, дружище!</p>
+
+        <%# <%= form_tag do %1> %>
+        <%#   <%= text_field_tag :email %1> %>
+        <%#   <%= submit_tag "Сообщить о запуске!" %1> %>
+        <%# <% end %1> %>
       </div>
     </div>
   </div>
@@ -64,27 +69,55 @@
         </h2>
 
         <ul class="features">
-          <li>
+          <li class="text">
             <p>
-              <strong>Фича 1</strong>
-              Описание фичи 1
+              <strong>Во-первых</strong>
+              Выбери интересующий тебя девайс.
             </p>
           </li>
 
-          <li>
+          <li class="image">
+            <%= image_tag 'landing/choosemac.png' %>
+          </li>
+
+          <li class="text">
             <p>
-              <strong>Фича 2</strong>
-              Описание фичи 2
+              <strong>Во-вторых</strong>
+              Назначь цену сам.
             </p>
           </li>
 
-          <li>
+          <li class="image">
+            <%= image_tag 'landing/chooseprice.png' %>
+          </li>
+
+          <li class="text">
             <p>
-              <strong>Фича 3</strong>
-              Описание фичи 3
+              <strong>Во-третьих</strong>
+              Укажи свои контакты.
             </p>
+          </li>
+
+          <li class="image">
+            <%= image_tag 'landing/typemail.png' %>
+          </li>
+
+          <li class="text">
+            <p>
+              <strong>Это все.</strong>
+              Как только мы узнаем о походящем предложении, мы сразу же сообщим.
+              Тебе остается только позвонить и договориться о покупке.
+            </p>
+          </li>
+
+          <li class="image">
+            <%= image_tag 'landing/happy.png', height: 192, width: 208%>
           </li>
         </ul>
+
+        <h2 class="heading centered">
+          У нас пока еще не все готово, но мы запустимся в самое ближайшее время.
+        </h2>
       </div>
     </div>
   </div>
